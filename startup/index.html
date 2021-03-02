@@ -17,6 +17,84 @@
 <h1>3rDimensionPrints</h1>
 
 
+<!-- Slie show start-->
+<div style="text-align:center">
+    <p>Use the arrows to view a few of our photos</p>
+</div>
+
+
+<div class="slideshow-container">
+    <!-- first image in the slide show -->
+
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img id="bCounter1" src="HouseImageOne.jpg" height="439" width="1030" >
+        <div class="text">Image of the model house</div>
+    </div>
+    <!-- second image in the slide show -->
+
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img id= "bCounter2" src="HoouseImageTwo.jpg" height="439" width="1030">
+        <div class="text">Image of different model</div>
+    </div>
+    <!-- third image in the slide show -->
+
+    <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img id="Baker" src="ender3V2.jpg" height="439" width="1030">
+        <div class="text">Image of printer</div>
+    </div>
+    <!-- to change the images on the slide show-->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <!-- &#10094 is the symbol for the arrows on the slide show-->
+    <a class="next" onclick="plusSlides(1)">&#10095;</a><!-- &#10095is the symbol for the arrows on the slide show-->
+
+</div>
+<br>
+<!-- to change the images on the slide show -->
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<!-- Script to make the slide show to work properly -->
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+<!-- end of the script-->
+<!-- Slide show end-->
+
+<div>
+    3rDimensionPrints is a local company that specialises in creating small scale replicas of modern building to be tested
+    to withstand local environmental factors. We employ
+</div>
+
+
 
 </body>
 
